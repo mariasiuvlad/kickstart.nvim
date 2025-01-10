@@ -1,6 +1,11 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+--  nvim tree
+vim.api.nvim_set_keymap('n', '\\', ':NvimTreeToggle<cr>', { silent = true, noremap = true })
+
+vim.keymap.set({ 'n', 'i' }, '<C-s>', '<Esc>:w<CR>', { desc = '[S]ave buffer' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
